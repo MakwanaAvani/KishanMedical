@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClientMasterPage.master.cs"
+    Inherits="ClientMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/Site1.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+       
+        
+        .sidenav
+        {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+background-color: #29e7cd;
+background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
+
+           /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../Image/login2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;*/
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px; /*  background: linear-gradient(to top, #66ccff 0%, #ffffff 100%);*/
+        }
+        
+        .sidenav a
+        {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: Black;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover
+        {
+            color: #191919;
+        }
+        
+        .sidenav .closebtn
+        {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 30px;
+            margin-left: 50px;
+        }
+        
+        #main
+        {
+            transition: margin-left .5s;
+            padding: 10px;
+        }
+        #footer
+        {
+            transition: margin-left .5s;
+            padding: 10px;
+        }
+        @media screen and (max-height: 450px)
+        {
+            .sidenav
+            {
+                padding-top: 15px;
+            }
+            .sidenav a
+            {
+                font-size: 18px;
+            }
+        }
+        
+       h1 {
+ text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+ 
+   <%-- h1{
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  color: $clr-white;
+  font-size: 80px;
+  letter-spacing: 5px;
+  top: 50%;
+  position: absolute;
+  margin-top: -40px;
+  
+}--%>
+
+ .img1{
+  border-radius: 50%;
+}
+       
+
+    </style>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main" class="main">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <div class="exp">
+                        <div class="header">
+                            <div class="leftcolumn">
+                                <div class="card">
+                                    <center>
+                                        <span style="font-size: 30px; cursor: pointer; height: 30%;" onclick="openNav()"
+                                            class="leftcolumn">&#9776;</span>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="rightcolumn">
+                                <div class="card">
+                                    <center>
+                                        <asp:ImageButton ID="ImageButton1" runat="server" Height="20px" Width="20px" ImageUrl="~/Admin/Image/unm-logo.png"
+                                            ImageAlign="Right" onclick="ImageButton1_Click" />
+                                        <asp:ImageButton ID="ImageButton2" runat="server" Height="20px"
+                                                Width="20px" ImageUrl="~/Admin/Image/logout.png" ImageAlign="Right" 
+                                            onclick="ImageButton2_Click" />
+                                                <br style="font-size: small" />
+                                        <h1 style="font-family: Garamond; font-size: 40px; text-align: center; color: #FFFFFF;">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Admin/Image/logo2.png" Height="60px"
+                                                Width="60px" CssClass="img1" />
+                                            𝓚𝓲𝓼𝓱𝓪𝓷 𝓜𝓮𝓭𝓲𝓬𝓪𝓵 𝓢𝓽𝓸𝓻𝓮 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="https://www.facebook.com/" target="_blank">
+                                                <asp:Image ID="Image13" runat="server" ImageUrl="~/Admin/Image/fb_icon.png" Height="30px"
+                                                    Width="40px" ToolTip="FaceBook" /></a> <a href="https://www.instagram.com/ " target="_blank">
+                                                        <asp:Image ID="Image14" runat="server" ImageUrl="~/Admin/Image/instagram_icon.png"
+                                                            Height="30px" Width="30px" ToolTip="Instagram" /></a> <a href="https://www.blogger.com/"
+                                                                target="_blank">
+                                                                <asp:Image ID="Image15" runat="server" ImageUrl="~/Admin/Image/blogger_icon3.jpg"
+                                                                    Height="30px" Width="30px" ToolTip="Blogger" /></a> <a href="AddtoCart.aspx" target="_blank">
+                                                                        <asp:Image ID="Image12" runat="server" ImageUrl="~/Admin/Image/shoppingcart.png"
+                                                                            Height="30px" Width="30px" ToolTip="Add To Cart" /></a>
+                                            <div style="font-size: medium">
+                                                Best of Care,Close to Home</div>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><a
+                            href="Client_Home.aspx">𝓗𝓸𝓶𝓮</a> <a href="Client_Category.aspx">𝓗𝓮𝓪𝓵𝓽𝓱𝓒𝓪𝓻𝓮
+                                𝓟𝓻𝓸𝓭𝓾𝓬𝓽𝓼</a> <a href="Client_Consultation.aspx">𝓒𝓸𝓷𝓼𝓾𝓵𝓽𝓪𝓽𝓲𝓸𝓷</a><a
+                                    href="Client_HealthArticles.aspx">𝓗𝓮𝓪𝓵𝓽𝓱 𝓐𝓻𝓽𝓲𝓬𝓵𝓮𝓼</a>
+                        <a href="Client_DiagnosticTests.aspx">𝓓𝓲𝓪𝓰𝓷𝓸𝓼𝓽𝓲𝓬 𝓣𝓮𝓼𝓽𝓼</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="content">
+                        <asp:ContentPlaceHolder ID="head" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="footer">
+                        <center class="exp">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td class="style8">
+                                        <br />
+                                        Help<br />
+                                        <asp:Image ID="Image4" runat="server" ImageUrl="~/Admin/Image/FAQs.png" Width="20px" />
+                                        <a href="Client_FAQ.aspx" style="text-decoration: blink">FAQ</a><br />
+                                        <asp:Image ID="Image5" runat="server" ImageUrl="~/Admin/Image/ReturnPolicy.jpg" Width="20px" /><a
+                                            href="Client_ReturnPolicy.aspx" style="text-decoration: blink">Return Policy</a><br />
+                                        <asp:Image ID="Image6" runat="server" ImageUrl="~/Admin/Image/TermsConditions2.jpg"
+                                            Width="20px" />
+                                        <a href="Client_TermsAndConditions.aspx" style="text-decoration: blink">Terms & Conditions</a><br />
+                                        <asp:Image ID="Image7" runat="server" ImageUrl="~/Admin/Image/PrivacyPolicy.jpg"
+                                            Width="20px" /><a href="Client_PrivacyPolicy.aspx" style="text-decoration: blink">Privacy
+                                                Policy</a><br />
+                                    </td>
+                                    <td class="style8">
+                                        Kishan Medical<br />
+                                        <asp:Image ID="Image8" runat="server" ImageUrl="~/Admin/Image/contactus2.png" Width="20px" /><a
+                                            href="Client_ContactUs.aspx" style="text-decoration: blink">Contact Us</a><br />
+                                        <asp:Image ID="Image9" runat="server" ImageUrl="~/Admin/Image/about-us-logo2.png"
+                                            Width="20px" />
+                                        <a href="Client_AboutUs.aspx" style="text-decoration: blink">About Us</a><br />
+                                        <asp:Image ID="Image10" runat="server" ImageUrl="~/Admin/Image/feedback.png" Width="20px" />
+                                        <a href="Client_FeedBack.aspx" style="text-decoration: blink">FeedBack</a><br />
+                                    </td>
+                                    <td class="style8">
+                                        For Customers<br />
+                                        <a href="Client_Category.aspx" style="text-decoration: blink">HealthCare Products</a><br />
+                                        <a href="Client_HealthArticles.aspx" style="text-decoration: blink">Health Articles</a><br />
+                                    </td>
+                                    <td class="style3">
+                                        Partner Wih Us<br />
+                                        <asp:Image ID="Image11" runat="server" ImageUrl="~/Admin/Image/Franchise.jpg" Width="20px" />
+                                        <a href="Client_Franchise.aspx">Franchise</a><br />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="text-align: center; width: 100%; border-top-style: inset; border-color: #ffffff">
+                                <tr>
+                                    <td colspan="4" class="style11" align="center">
+                                        <h3>
+                                            ℂ𝕠𝕡𝕪𝕣𝕚𝕘𝕙𝕥&#169;𝟚𝟘𝟙𝟡
+                                        </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <h3>
+                                            𝓟𝓻𝓮𝓹𝓪𝓻𝓮𝓭 𝓫𝔂:- 𝓓𝓲𝓿𝔂𝓪 𝓗. 𝓟𝓪𝓽𝓪𝓭𝓲𝔂𝓪(1404) 𝓐𝓿𝓪𝓷𝓲 𝓘. 𝓜𝓪𝓴𝓿𝓪𝓷𝓪(1343)</h3>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

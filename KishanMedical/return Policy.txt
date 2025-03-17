@@ -1,0 +1,33 @@
+﻿MedLife's goal is for our customers to be completely satisfied with their purchase. However, occasionally you may receive a product that does not fit your personal needs. If you need to return an item to us, please follow our guidelines detailed below.
+
+RETURN POLICY
+
+ Most merchandise can be returned within 30 days meeting our return criteria:
+
+Products must be in new, 100% resalable condition. No cracks, No scratches, Dirty, Marked tires, or any indications of usage.
+Products must be returned in original packaging.
+
+
+
+
+https://codepen.io/billyysea/pen/whjbK
+
+https://www.w3schools.com/colors/colors_gradient.asp
+
+https://uigradients.com/#DeepSeaSpace
+ background:#EDC7B7;
+=>
+background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+=>
+background: #74ebd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+how ro apply grafient colot in css
+
+𝒫𝓇𝑒𝓋𝒾𝑒𝓌 𝒯𝑒𝓍𝓉

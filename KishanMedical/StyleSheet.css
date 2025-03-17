@@ -1,0 +1,15 @@
+﻿body {
+}
+.back
+{
+    background-color:Blue;
+}
+.btn-grad 
+{
+    background-image: linear-gradient(to right, #50C9C3 0%, #96DEDA 51%, #50C9C3 100%)
+    }
+.btn-grad:hover  
+{
+    background-position: right center; 
+    }
+

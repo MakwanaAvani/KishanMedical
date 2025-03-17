@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/Site1.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .sidenav
+        {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a
+        {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover
+        {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn
+        {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 30px;
+            margin-left: 50px;
+        }
+        
+        #main
+        {
+            transition: margin-left .5s;
+            padding: 10px;
+        }
+        
+        @media screen and (max-height: 450px)
+        {
+            .sidenav
+            {
+                padding-top: 15px;
+            }
+            .sidenav a
+            {
+                font-size: 18px;
+            }
+        }
+        .style1
+        {
+            background: white;
+            margin-top: 0;
+            padding-right: 50%;
+            padding-left: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 429px;
+        }
+    </style>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <div class="header">
+            <div class="leftcolumn">
+                <div class="card">
+                    <center>
+                        <span style="font-size: 30px; cursor: pointer; background: white; padding-right: 30px;"
+                            onclick="openNav()" class="leftcolumn">&#9776;</span>
+                    </center>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <center>
+                        <h2>
+                            Kishan Medical Store</h2>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a
+                href="Admin/Admin_Home.aspx">Home</a><a href="Admin/Admin_HealthCareProducts.aspx">Health Care Products</a>
+            <a href="Admin/Admin_Consultation.aspx">Consultation</a><a href="Admin/Admin_HealthArticles.aspx">Health Articles</a>
+            <a href="Admin/Admin_DiagnosticTests.aspx">Diagnostic Tests</a>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+          <ul>
+                Help
+                <li><a href="Client_FAQ.aspx">FAQ</a>
+                </li>
+                <li><a href="Client_ReturnPolicy.aspx">Return Policy</a>
+                </li>
+                <li><a href="Client_TermsAndConditions.aspx">Terms & Conditions</a>
+                </li>
+                <li><a href="Client_PrivacyPolicy.aspx">Privacy Policy</a>
+                </li>
+            </ul>
+            <ul>
+                Kishan Medical<br />
+                <li><a href="Client_ContactUs.aspx">Contact Us</a>
+                </li>
+                <li><a href="Client_AboutUs.aspx">About Us</a>
+                </li>
+                <li><a href="Client_Category.aspx">Blog</a>
+                </li>
+                <li><a href="Admin_Category.aspx">Instagram</a>
+                </li>
+                <li><a href="Admin_Category.aspx">Facebook</a><br />
+                </li>
+                <li><a href="Client_FeedBack.aspx">FeedBack</a><br />
+                </li>
+            </ul>
+            <ul>
+                For Customers<br />
+                <li><a href="Client_HealthCareProducts.aspx">HealthCare Products</a><br />
+                </li>
+                <li><a href="Client_HealthArticles.aspx">Health Articles</a><br />
+                </li>
+            </ul>
+            <ul>
+                Partner Wih Us<br />
+                <li><a href="Client_Franchise.aspx">Franchise</a><br />
+                </li>
+            </ul>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
